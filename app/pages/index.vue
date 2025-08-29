@@ -26,19 +26,15 @@
 <script setup lang="ts">
 import { usePages } from '~/composables/usePages'
 import type { PageSummary } from '~/types/page'
+import { formatDate } from '~/utils/formatDate'
 
 const { fetchPages } = usePages()
 const pages: PageSummary[] = await fetchPages()
-
-function formatDate(dateStr: string) {
-  return new Date(dateStr).toLocaleDateString(undefined, {
-    year: "numeric", month: "long", day: "numeric"
-  })
-}
 
 useHead({
   title: "Articles - Winona",
   meta: [{ name: "description", content: "Browse all Winona articles with publication dates." }]
 })
 </script>
+
 

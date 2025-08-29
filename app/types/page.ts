@@ -1,5 +1,3 @@
-// app/types/page.ts
-
 export interface PageSEO {
   title: string
   description: string

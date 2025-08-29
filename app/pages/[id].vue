@@ -22,20 +22,16 @@
 <script setup lang="ts">
 import { usePages } from '~/composables/usePages'
 import type { PageDetail } from '~/types/page'
+import { formatDate } from '~/utils/formatDate'
 
 const route = useRoute()
 const { fetchPageById } = usePages()
 const page: PageDetail = await fetchPageById(route.params.id as string)
-
-function formatDate(dateStr: string) {
-  return new Date(dateStr).toLocaleDateString(undefined, {
-    year: "numeric", month: "long", day: "numeric"
-  })
-}
 
 useHead({
   title: page.seo.title,
   meta: [{ name: "description", content: page.seo.description }]
 })
 </script>
+
 
