@@ -10,10 +10,9 @@
               {{ page.title }}
             </NuxtLink>
           </h2>
-          <p class="text-sm opacity-70">
-            📅 Published: {{ formatDate(page.datePublished) }}
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            🔄 Updated: {{ formatDate(page.dateModified) }}
+          <p class="flex flex-col gap-1 text-sm opacity-70">
+            <span>📅 Published: {{ formatDate(page.datePublished) }}</span>
+            <span>🔄 Updated: {{ formatDate(page.dateModified) }}</span>          
           </p>
           <div class="card-actions justify-end mt-2">
             <NuxtLink :to="`/${page.id}`" class="btn btn-sm btn-primary">Read more</NuxtLink>

@@ -11,17 +11,17 @@
 
           <h1 class="text-2xl font-bold">{{ page.title }}</h1>
         </div>
-        <p class="text-sm opacity-70 mb-4">
-          📅 Published: {{ formatDate(page.datePublished) }}
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          🔄 Updated: {{ formatDate(page.dateModified) }}
-        </p>
 
         <article class="prose max-w-none" v-html="page.body"></article>
 
         <p class="mt-6 text-sm opacity-70">
           ✅ Reviewed by <strong>{{ page.reviewer.name }}</strong>,
           {{ page.reviewer.credentials }} ({{ page.reviewer.affiliation }})
+        </p>
+
+        <p class="flex flex-col gap-1 text-sm opacity-70 mt-4">
+          <span>📅 Published: {{ formatDate(page.datePublished) }}</span>
+          <span>🔄 Updated: {{ formatDate(page.dateModified) }}</span>
         </p>
       </div>
     </div>
