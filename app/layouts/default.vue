@@ -1,6 +1,6 @@
 <template>
-  <div :data-theme="theme" class="flex flex-col min-h-screen">
-    <header class="navbar bg-base-100 shadow-sm">
+  <div :data-theme="theme" class="flex flex-col h-screen">
+    <header class="navbar bg-base-100 shadow-sm flex-none">
       <div class="flex-1">
         <NuxtLink to="/" class="btn btn-ghost normal-case text-xl">Winona Home Assessment</NuxtLink>
       </div>
@@ -13,7 +13,7 @@
       <slot />
     </main>
 
-    <footer class="footer bg-base-200 p-4 justify-center">
+    <footer class="footer bg-base-200 p-4 justify-center flex-none">
       <ThemeToggle />
     </footer>
   </div>
