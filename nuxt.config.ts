@@ -15,4 +15,11 @@ export default defineNuxtConfig({
 
   css: ['~/assets/main.css'],
   modules: ["@pinia/nuxt"],
+  
+  runtimeConfig: {
+    public: {
+      apiBase: "https://2gtshonemmlvswaqfcepdjsbqy0rdwth.lambda-url.us-west-2.on.aws",
+      apiAuth: "ZDY0MTg3ZDUtMTVlOS00ZDZmLTk5OTMtNzg2MGE2NGM2ZWZmOiBJZiB5b3Ugc2VlIHRoaXMsIGxldCBtZSBrbm93Lg=="
+    }
+  }
 });
