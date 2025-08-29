@@ -2,9 +2,18 @@
   <div class="container mx-auto">
     <div class="card bg-base-100 shadow-md">
       <div class="card-body">
-        <h1 class="text-3xl font-bold mb-2">{{ page.title }}</h1>
+        <div class="flex items-center gap-3">
+          <NuxtLink to="/" class="btn btn-circle btn-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </NuxtLink>
+
+          <h1 class="text-2xl font-bold">{{ page.title }}</h1>
+        </div>
         <p class="text-sm opacity-70 mb-4">
-          📅 Published: {{ formatDate(page.datePublished) }}  
+          📅 Published: {{ formatDate(page.datePublished) }}
+          &nbsp;&nbsp;&nbsp;&nbsp;
           🔄 Updated: {{ formatDate(page.dateModified) }}
         </p>
 

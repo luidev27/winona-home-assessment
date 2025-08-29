@@ -11,7 +11,8 @@
             </NuxtLink>
           </h2>
           <p class="text-sm opacity-70">
-            📅 Published: {{ formatDate(page.datePublished) }}  
+            📅 Published: {{ formatDate(page.datePublished) }}
+            &nbsp;&nbsp;&nbsp;&nbsp;
             🔄 Updated: {{ formatDate(page.dateModified) }}
           </p>
           <div class="card-actions justify-end mt-2">
